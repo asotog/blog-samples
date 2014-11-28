@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    <!-- build:css(./app) styles/vendor.css -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+</head>
+<body>
+    
+    <!-- Add your site or application content here -->
+    <div class="app-container container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/contact.html">Contact</a></li>
+            </ul>
+            <h3 class="text-muted">angularRequirejs</h3>
+        </div>
+        
+        <div ng-include="'views/contact-form.html'" ng-controller="ContactCtrl"></div>
+        
+        <div class="footer">
+            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        </div>
+    </div>
+    
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="libs/es5-shim/es5-shim.js"></script>
+    <script src="libs/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+    
+    <!-- build:js(./app) scripts/vendor.js -->
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/requirejs/require.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js(.) scripts/contact-main.js -->
+    <script src="scripts/require-config.js"></script>
+    <script src="scripts/contact-main.js"></script>
+    <!-- endbuild -->
+    
+    
+    
+</body>
+</html>
