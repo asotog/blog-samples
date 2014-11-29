@@ -11,8 +11,8 @@ define([], function() {
     angular.module('angularRequirejsApp.services.Comments', [])
         .service('Comments', function comments() {
             return {
-                addContactMessage: function() {
-
+                addContactMessage: function(contactMessage) {
+                    alert(JSON.stringify(contactMessage));
                 },
                 fetchAll: function() {
                     return [{

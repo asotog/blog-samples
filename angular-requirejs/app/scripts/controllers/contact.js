@@ -9,11 +9,17 @@ define(['services/comments'], function() {
     
     angular.module('angularRequirejsApp.controllers.ContactCtrl', ['angularRequirejsApp.services.Comments']).controller('ContactCtrl', ['Comments', '$scope',
     function(Comments, $scope) {
-        /* move this to constants file */
-        tinyMCE.baseURL = '/libs/tinymce';
+        $scope.fullname = '';
+        $scope.email = '';
+        $scope.message = '';
+        
         /* textarea configuration */
         $scope.tinymceOptions = {
             menubar: false
+        };
+        
+        $scope.send = function() {
+            Comments.addContactMessage({email: this.email, fullname: this.fullname, message: this.message});
         };
     }]);
     
